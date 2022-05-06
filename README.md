@@ -40,9 +40,9 @@ In this project, we will use the same **NIC** on all machines. **BRIDGE** for ex
 
 Environment Variable | Description | 
 -------------------- | ----------- | 
-`CATALOG_ADDRESS` | The address of the catalog service. Used in the order and front-end services. 
-`ORDER_ADDRESS` | The address of the order service. Used in the front-end and catalog services. 
-`FRONT_END_ADDRESS` | The address of the front-end service. Used in the catalog and order services.
+`CATALOG_ADDRESS` | The address of the catalog service. 
+`ORDER_ADDRESS` | The address of the order service.  
+`FRONT_END_ADDRESS` | The address of the front-end service. 
 `FLASK_ENV` | Define the enviroment of the Flask application. Can be `development` or `production`. `development` enables the use of debug mode.
 `FLASK_DEBUG` | Enable debug mode or not. In debug mode, modifications to the Flask application files automatically refreshes the service. Requires `FLASK_ENV` to be set to `development`. Can be `True` or `False`. 
 `FLASK_PORT` | Define the port number used by the microservice. 
@@ -163,7 +163,7 @@ Changes to the front-end server are more than the changes to the order servers, 
 Environment Variable | Example
 -------------------- | -------
 `CATALOG_ADDRESSES` | `http://192.168.1.16\| http://192.168.1.17`
-`ORDER_ADDRESSES` | http://192.168.1.19\| http://192.168.1.20`
+`ORDER_ADDRESSES` | `http://192.168.1.19\| http://192.168.1.20`
 
 
 ## Containers
