@@ -1,20 +1,22 @@
-# Import instance and port
+######### get ready the instance and port
 from flask_app import app, port
-############################################################
+###########
 
-# Import error handler
+########## Import error handler instance
 import errorhandles
-############################################################
+###########
+
 # Import routes
 import routes
-############################################################
-# This creates the database file if it does not exist
-#and adds the books to it 
+###########
+
+########### bring data base and if not existed create new
 from database import create_database
 create_database()
 
-############################################################
-# Run Flask application instance
+###########
+# Run Flask application on local host and port number
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=port)
-############################################################
+###########
+
