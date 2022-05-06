@@ -170,9 +170,15 @@ Environment Variable | Example
 
 For each server, a `Dockerfile` file is included in order to be able to create docker images for each server. It is set up to use the latest `alpine` image as a base, install `python` and `pip` on it, expose the port 5000 and set the start-up command for each server.
 
-Moreover, a [Windows batch file](./docker_init.bat) is included that sets up a user-defined Docker network, creates the images and runs them in 5 containers.
+```
+sudo apt update
+sudo apt install docker.io
+bash Dockerfile
+```
+  ---
+  ---
+  DONE , Students Mohammad Abdelhuq & Yousef Dhedee >.<
 
-Finally, the folder [env-vars](./env-vars) contains the enviroment variables that are needed for each Docker container to run properly. These files are referenced in the batch file. If more containers are to be added, the appropriate envrionement variables need to be modified for the existing containers and added for the new ones.
 
 
 
