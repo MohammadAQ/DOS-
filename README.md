@@ -15,7 +15,7 @@ Where this store works with Microservices - also known as the microservice archi
 ---
 # How to run this project: 
 ### First: setup your environment.
-in this project, we need to setup five machines, where each one works with others. where its recommended to be at the same network, or make a virtual environments. using ####VMware or ####VirtualBox for example. 
+in this project, we need to setup five machines, where each one works with others. where its recommended to be at the same network, or make a virtual environments. using ###VMware or ###VirtualBox for example. 
 
 
 ### Second : Installation.
@@ -26,9 +26,9 @@ Next, make sure that you have **pip** if you don't have it on your device from [
 On each virtual environment that works as a microservice is in its own folder. --> on CLI:  
 ```
 git clone https://github.com/MohammadAQ/DOS-
-
+```
 
 For each machine, install the required Python packages using pip:
 ```
 pip3 install -r /path/to/microservice/folder/requirements.txt
-
+```
