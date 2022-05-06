@@ -15,7 +15,7 @@ Where this store works with Microservices - also known as the microservice archi
 ---
 # How to run this project: 
 ### First: setup your environment.
-in this project, we need to setup five machines, where each one works with others. where its recommended to be at the same network, or make a virtual environments. using ### VMware or ### VirtualBox for example. 
+in this project, we need to setup five machines, where each one works with others. where its recommended to be at the same network, or make a virtual environments. using **VMware** or **VirtualBox** for example. 
 
 
 ### Second : Installation.
@@ -35,14 +35,14 @@ pip3 install -r requirements.txt
 ---
 
 # Networking 
-In this project, we will use the same ### NIC on all machines. ### BRIDGE for example. 
+In this project, we will use the same **NIC** on all machines. **BRIDGE** for example. 
 ## First you need to edit the `flask_app` file on each machine by adding the other machines addresses. as shown in the table below.
 
-Environment Variable | Description | Example
--------------------- | ----------- | -------
-`CATALOG_ADDRESS` | The address of the catalog service. Used in the order and front-end services. | `http://192.168.1.100:5000`
-`ORDER_ADDRESS` | The address of the order service. Used in the front-end and catalog services. | `http://192.168.1.101:5000`
-`FRONT_END_ADDRESS` | The address of the front-end service. Used in the catalog and order services. | `http://192.168.1.102:5000`
-`FLASK_ENV` | Define the enviroment of the Flask application. Can be `development` or `production`. `development` enables the use of debug mode. | `development`
-`FLASK_DEBUG` | Enable debug mode or not. In debug mode, modifications to the Flask application files automatically refreshes the service. Requires `FLASK_ENV` to be set to `development`. Can be `True` or `False`. | `True`
-`FLASK_PORT` | Define the port number used by the microservice. | `5000`
+Environment Variable | Description | 
+-------------------- | ----------- | 
+`CATALOG_ADDRESS` | The address of the catalog service. Used in the order and front-end services. 
+`ORDER_ADDRESS` | The address of the order service. Used in the front-end and catalog services. 
+`FRONT_END_ADDRESS` | The address of the front-end service. Used in the catalog and order services.
+`FLASK_ENV` | Define the enviroment of the Flask application. Can be `development` or `production`. `development` enables the use of debug mode.
+`FLASK_DEBUG` | Enable debug mode or not. In debug mode, modifications to the Flask application files automatically refreshes the service. Requires `FLASK_ENV` to be set to `development`. Can be `True` or `False`. 
+`FLASK_PORT` | Define the port number used by the microservice. 
