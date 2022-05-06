@@ -1,22 +1,16 @@
 from flask_app import app
 
-##########################################################################################
 
 
 @app.errorhandler(404)
 def not_found(e):
-    return {'message': 'The requested URL was not found on the server. If you entered the URL manually please check '}, 404
-##########################################################################################
+    return {'message': 'The requested URL was not found on the server'}, 404
 
 @app.errorhandler(500)
 def internal_server_error(e):
-    return {'message': 'The server encountered an internal error and was unable to complete your request. Either the '
-                       'server is overloaded or there is an error in the application.'}, 500
-##########################################################################################
+    return {'message': ' internal error and was unable to complete your request'}, 500
 
 @app.errorhandler(405)
 def method_not_allowed(e):
-    return {'message': 'The method is not allowed for the requested URL.'}, 405
-    
-    
-##########################################################################################    
+    return {'message': 'The method is not allowed for URL.'}, 405
+
