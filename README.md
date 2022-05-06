@@ -130,4 +130,32 @@ curl -H "Content-Type: application/json" --request GET http://192.168.1.15:5000/
   }
 ]
 ```
+---
+
+
+# Caching
+A Python dictionary (dict) and list were used to implement caching in the front-end server (list). The dictionary will contain the cache's key-value pairs, while the list will serve as a Least Recently Used (LRU) queue for the cache replace policy.
+
+## Caching Search 
+Caching search results is more difficult because changes to a book can invalidate an entire subject (although, in Bazar, updates don't impact fields that are returned in search results, so invalidating isn't necessary, but I did it anyway).
+I solved this problem by making the key the search term, and the entry the JSON response of the search operation, as well as a list of all topics covered in that response.
+When the catalog server sends an invalidate request to the front-end server for a topic, all cached items are checked for their topic set, and all topic sets that include that topic are erased. 
+A new end-point was implemented that allows catalog servers to entirely clean the cache. This is helpful if a new book is needed in the future.
+
+## Replication
+
+### Catalog Servers
+
+The first modification made to the catalog server was the needed environment variables, since it nows needs to know the addresses of the other catalog servers.
+
+Environment Variable | Description | Example
+-------------------- | ----------- | -------
+`CATALOG_ADDRESSES` | The addresses of the other catalog servers. Addresses are seperated by a `\|` character | `http://catalog2.bazar.com\| http://catalog2.bazar.com`
+
+
+Consistency issues rise in both read and write operations.
+
+#### **Sequence Numbers**
+
+In order for servers to keep track of the versions of the books they have, a sequence number field for each was introduced. This field is used to compare versions between servers in order to maintain consistency.
 
