@@ -152,5 +152,27 @@ For replication on catalog server , we made two servers for it. so for the catal
 Variable | Example
 ---------| -------
 `CATALOG_ADDRESSES` | `http://192.168.1.16\| http://192.168.1.17`
-`CATALOG_ADDRESSES` | `http://192.168.1.19\| http://192.168.1.20`
+`ORDER_ADDRESSES` | `http://192.168.1.19\| http://192.168.1.20`
+
+
+
+### Front-end Server
+
+Changes to the front-end server are more than the changes to the order servers, but still not major. First, the environment variables now support multiple catalog and order servers.
+
+Environment Variable | Example
+-------------------- | -------
+`CATALOG_ADDRESSES` | `http://192.168.1.16\| http://192.168.1.17`
+`ORDER_ADDRESSES` | http://192.168.1.19\| http://192.168.1.20`
+
+
+## Containers
+
+For each server, a `Dockerfile` file is included in order to be able to create docker images for each server. It is set up to use the latest `alpine` image as a base, install `python` and `pip` on it, expose the port 5000 and set the start-up command for each server.
+
+Moreover, a [Windows batch file](./docker_init.bat) is included that sets up a user-defined Docker network, creates the images and runs them in 5 containers.
+
+Finally, the folder [env-vars](./env-vars) contains the enviroment variables that are needed for each Docker container to run properly. These files are referenced in the batch file. If more containers are to be added, the appropriate envrionement variables need to be modified for the existing containers and added for the new ones.
+
+
 
