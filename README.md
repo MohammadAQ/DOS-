@@ -52,6 +52,82 @@ Environment Variable | Description |
 python3 ./app.py
 ```
 **Note** if not work, you need to but the path to the `app.py` file. it should work. **See Figure Bleow**
-##### **running the microservice**
+ **running the microservice** where you should make the same thing on all machines.
 ![running the microservice](./pics/first.png)
+
+---
+
+# Request Examples.
+**Note**: **Postman** is a good tool for making Restful-API methods.or you can do it with **CURL** tool. 
+
+
+
+---
+
+### 1. Search with query `t`
+
+#### cURL Request
+
+```
+curl -H "Content-Type: application/json" --request GET http://192.168.1.15:5000/search/t
+```
+
+#### Response
+
+`200`
+```json
+[
+  {
+    "id": 1,
+    "title": "How to get a good grade in DOS in 40 minutes a day",
+    "topic": "Distributed Systems"
+  },
+  {
+    "id": 2,
+    "title": "RPCs for Noobs",
+    "topic": "Distributed Systems"
+  },
+  {
+    "id": 3,
+    "title": "Xen and the Art of Surviving Undergraduate School",
+    "topic": "Graduate School"
+  },
+  {
+    "id": 4,
+    "title": "Cooking for the Impatient Undergrad",
+    "topic": "Graduate School"
+  }
+]
+```
+
+---
+
+
+
+
+### 2. searching for word Distributed.
+
+#### cURL Request
+
+```
+curl -H "Content-Type: application/json" --request GET http://192.168.1.15:5000/search/distributed
+```
+
+#### Response
+
+`200`
+```json
+[
+  {
+    "id": 1,
+    "title": "How to get a good grade in DOS in 20 minutes a day",
+    "topic": "Distributed Systems"
+  },
+  {
+    "id": 2,
+    "title": "RPCs for Dummies",
+    "topic": "Distributed Systems"
+  }
+]
+```
 
