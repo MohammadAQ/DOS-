@@ -144,18 +144,13 @@ A new end-point was implemented that allows catalog servers to entirely clean th
 
 ## Replication
 
-### Catalog Servers
+### Catalog Servers and Order Servers
 
-The first modification made to the catalog server was the needed environment variables, since it nows needs to know the addresses of the other catalog servers.
-
-Environment Variable | Description | Example
--------------------- | ----------- | -------
-`CATALOG_ADDRESSES` | The addresses of the other catalog servers. Addresses are seperated by a `\|` character | `http://catalog2.bazar.com\| http://catalog2.bazar.com`
+For replication on catalog server , we made two servers for it. so for the catalog servers we have two addresses.**Note** the two machines IPs . as below.
 
 
-Consistency issues rise in both read and write operations.
-
-#### **Sequence Numbers**
-
-In order for servers to keep track of the versions of the books they have, a sequence number field for each was introduced. This field is used to compare versions between servers in order to maintain consistency.
+Variable | Example
+---------| -------
+`CATALOG_ADDRESSES` | `http://192.168.1.16\| http://192.168.1.17`
+`CATALOG_ADDRESSES` | `http://192.168.1.19\| http://192.168.1.20`
 
