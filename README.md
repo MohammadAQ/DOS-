@@ -51,5 +51,7 @@ Environment Variable | Description |
 ```
 python3 ./app.py
 ```
-**Note** if not work, you need to but the path to the `app.py` file. it should work. 
+**Note** if not work, you need to but the path to the `app.py` file. it should work. **See Figure Bleow**
+##### **running the microservice**
+![running the microservice](./pics/first.png)
 
