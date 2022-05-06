@@ -46,3 +46,10 @@ Environment Variable | Description |
 `FLASK_ENV` | Define the enviroment of the Flask application. Can be `development` or `production`. `development` enables the use of debug mode.
 `FLASK_DEBUG` | Enable debug mode or not. In debug mode, modifications to the Flask application files automatically refreshes the service. Requires `FLASK_ENV` to be set to `development`. Can be `True` or `False`. 
 `FLASK_PORT` | Define the port number used by the microservice. 
+
+## Next, after setting up all the above simply you can run this project by executing this command on each machine.
+```
+python3 ./app.py
+```
+**Note** if not work, you need to but the path to the `app.py` file. it should work. 
+
