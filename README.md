@@ -166,17 +166,6 @@ Environment Variable | Example
 `ORDER_ADDRESSES` | `http://192.168.1.19\| http://192.168.1.20`
 
 
-## Containers
-
-For each server, a `Dockerfile` file is included in order to be able to create docker images for each server. It is set up to use the latest `alpine` image as a base, install `python` and `pip` on it, expose the port 5000 and set the start-up command for each server.
-
-```
-sudo apt update
-sudo apt install docker.io
-bash Dockerfile
-```
-  ---
-  ---
   DONE , Students Mohammad Abdelhuq & Yousef Dhedee >.<
 
 
