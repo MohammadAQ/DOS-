@@ -6,9 +6,9 @@ from os import environ
 app = Flask(__name__)
 #######################
 #### addresses of front  and order servers from the environment variables
-ORDER_ADDRESS = environ.get('http://192.168.1.11:5000 | http://192.168.1.16:5000')
-FRONT_END_ADDRESS = environ.get('http://192.168.1.15:5000')
-CATALOG_ADDRESSES = environ.get('http://192.168.1.13:5000 | http://192.168.1.17:5000')
+ORDER_ADDRESS = environ.get('http://127.0.0.1:5003 | http://127.0.0.1:5022')
+FRONT_END_ADDRESS = environ.get('http://127.0.0.1:5002')
+CATALOG_ADDRESSES = environ.get('http://127.0.0.1:5000 | http://127.0.0.1:5011')
 if CATALOG_ADDRESSES is None or CATALOG_ADDRESSES.strip() == '':
     CATALOG_ADDRESSES = []
 else:
@@ -16,7 +16,7 @@ else:
 
 ##################
 ###Get port from the environment variables
-port = int(environ.get('PORT', 5000))
+port = int(environ.get('PORT', 5011))
 
 ################################
 ######flask environment settings from  environment variables

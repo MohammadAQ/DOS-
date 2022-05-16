@@ -17,6 +17,6 @@ create_database()
 ###########
 # Run Flask application on local host and port number
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=port)
+    app.run(host="0.0.0.0", port=5011)
 ###########
 
