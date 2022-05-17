@@ -90,12 +90,12 @@ curl -H "Content-Type: application/json" --request GET http://192.168.1.15:5000/
   {
     "id": 3,
     "title": "Xen and the Art of Surviving Undergraduate School",
-    "topic": "Graduate School"
+    "topic": "undergraduate School"
   },
   {
     "id": 4,
     "title": "Cooking for the Impatient Undergrad",
-    "topic": "Graduate School"
+    "topic": "undergraduate School"
   }
 ]
 ```
@@ -120,12 +120,12 @@ curl -H "Content-Type: application/json" --request GET http://192.168.1.15:5000/
 [
   {
     "id": 1,
-    "title": "How to get a good grade in DOS in 20 minutes a day",
+    "title": "How to get a good grade in DOS in 40 minutes a day",
     "topic": "Distributed Systems"
   },
   {
     "id": 2,
-    "title": "RPCs for Dummies",
+    "title": "RPCs for Noobs",
     "topic": "Distributed Systems"
   }
 ]
