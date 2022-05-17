@@ -174,20 +174,20 @@ For each server, a `Dockerfile` file is included in order to be able to create d
 ### simply. you need to change the mode of file to became an executable file. 
 
 ```
-sudo chmod +x docker.sh```
+sudo chmod +x docker.sh
 ```
 
 ### then run the file.
 
 ```
-sudo ./docker.sh```
+sudo ./docker.sh
 ```
 
 ### The final output of running container should be like this: **See Figure Bleow**
 
 ![running the comtainers](./pics/cont.png)
 
-
+note: here we made a stand alone mechine running with docker. and each server has a uniqe ip and port number to achive a success communication between each server. 
 
   DONE , Students Mohammad Abdelhuq & Yousef Dhedee >.<
 
