@@ -166,6 +166,13 @@ Environment Variable | Example
 `ORDER_ADDRESSES` | `http://192.168.1.19\| http://192.168.1.20`
 
 
+## Dockerization
+
+For each server, a `Dockerfile` file is included in order to be able to create docker images for each server. It is set up to use the latest `alpine` image as a base, install `python` and `pip` on it, expose the needed ports and set the start-up command for each server.
+
+
+Finally, the folder [env-vars](./env-vars) contains the enviroment variables that are needed for each Docker container to run properly. These files are referenced in the batch file. If more containers are to be added, the appropriate envrionement variables need to be modified for the existing containers and added for the new ones.
+
   DONE , Students Mohammad Abdelhuq & Yousef Dhedee >.<
 
 
