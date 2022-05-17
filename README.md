@@ -175,13 +175,18 @@ For each server, a `Dockerfile` file is included in order to be able to create d
 
 ```
 sudo chmod +x docker.sh```
----
+```
 
-## then run the file.
+### then run the file.
 
-``
+```
 sudo ./docker.sh```
----
+```
+
+### The final output of running container should be like this: **See Figure Bleow**
+
+![running the comtainers](./pics/cont.png)
+
 
 
   DONE , Students Mohammad Abdelhuq & Yousef Dhedee >.<
