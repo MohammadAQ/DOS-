@@ -170,8 +170,19 @@ Environment Variable | Example
 
 For each server, a `Dockerfile` file is included in order to be able to create docker images for each server. It is set up to use the latest `alpine` image as a base, install `python` and `pip` on it, expose the needed ports and set the start-up command for each server.
 
+## How to Run servers on containers: 
+### simply. you need to change the mode of file to became an executable file. 
 
-Finally, the folder [env-vars](./env-vars) contains the enviroment variables that are needed for each Docker container to run properly. These files are referenced in the batch file. If more containers are to be added, the appropriate envrionement variables need to be modified for the existing containers and added for the new ones.
+```
+sudo chmod +x docker.sh```
+---
+
+## then run the file.
+
+``
+sudo ./docker.sh```
+---
+
 
   DONE , Students Mohammad Abdelhuq & Yousef Dhedee >.<
 
