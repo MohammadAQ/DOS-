@@ -1,8 +1,5 @@
-
-
-
-import Marshmallow as Marshmallow
-import SQLAlchemy as SQLAlchemy
+from flask_marshmallow import Marshmallow
+from flask_sqlalchemy import SQLAlchemy
 
 import os
 from flask import Flask

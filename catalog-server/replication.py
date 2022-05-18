@@ -1,14 +1,16 @@
 ############
 import random
 
-from flask_app import CATALOG_ADDRESSES, app
+from flask_app import app
 from requests import RequestException
 from book import Book, replication_schema
 from flask import request
 
 import requests
 ############
-
+ORDER_ADDRESS = ('http://10.0.2.11:5000 | http://10.0.2.15:5000').split(' | ')
+FRONT_END_ADDRESS = ('http://10.0.2.10:5000')
+CATALOG_ADDRESSES = ('http://10.0.2.7:5000 | http://10.0.2.8:5000').split(' | ')
 ##########1 second timeout for all connection
 #######100 millisecond timeout for connection establishment
 timeout = (0.1, 1)

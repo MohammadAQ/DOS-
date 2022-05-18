@@ -1,4 +1,4 @@
-#sudo docker create --gateway 10.0.2.1 --subnet 10.0.2.0/24 -d bridge "bazar_network_home"
+#sudo docker network create --gateway 10.0.2.1 --subnet 10.0.2.0/24 -d bridge "bazar_network_home"
 
 
 sudo docker build -t catalog_image:latest ./catalog-server

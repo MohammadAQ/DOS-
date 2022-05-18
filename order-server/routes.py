@@ -1,5 +1,10 @@
-from flask_app import app, CATALOG_ADDRESS
+from flask_app import app
 import requests
+
+CATALOG_ADDRESS = ('http://10.0.2.7:5000')
+FRONT_END_ADDRESS = ('http://10.0.2.10:5000')
+print(CATALOG_ADDRESS)
+print(FRONT_END_ADDRESS)
 
 # 1.5 second timeout for all connection
 # 150 millisecond timeout for connection establishment

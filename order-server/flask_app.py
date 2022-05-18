@@ -5,8 +5,9 @@ from os import environ
 app = Flask(__name__)
 ####################################################################
 # Get addresses of catalog and front end servers from the environment variables
-CATALOG_ADDRESS = environ.get('http://192.168.1.13:5000')
-FRONT_END_ADDRESS = environ.get('http://192.168.1.15:5000')
+CATALOG_ADDRESS = ('http://10.0.2.7:5000')
+FRONT_END_ADDRESS = ('http://10.0.2.10:5000')
+
 
 ####################################################################
 # Get the flask environment settings from the environment variables

@@ -1,4 +1,11 @@
-from flask_app import FRONT_END_ADDRESS
+#from flask_app import FRONT_END_ADDRESS
+ORDER_ADDRESS = ('http://10.0.2.11:5000 | http://10.0.2.15:5000').split(' | ')
+FRONT_END_ADDRESS = ('http://10.0.2.10:5000')
+CATALOG_ADDRESSES = ('http://10.0.2.7:5000 | http://10.0.2.8:5000').split(' | ')
+print(ORDER_ADDRESS)
+print(FRONT_END_ADDRESS)
+print(CATALOG_ADDRESSES)
+
 import requests
 
 ################
@@ -11,4 +18,4 @@ def invalidate_item(book_id):
 
 def invalidate_topic(book_topic):
     requests.delete(f'{FRONT_END_ADDRESS}/invalidate/topic/{book_topic}')
-    #################
+#################

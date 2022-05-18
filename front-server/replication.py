@@ -1,5 +1,10 @@
-from flask_app import app, CATALOG_ADDRESSES, ORDER_ADDRESSES
+from flask_app import app
+from os import environ
+CATALOG_ADDRESSES = ('http://10.0.2.7:5000|http://10.0.2.8:5000').split('|')
+ORDER_ADDRESSES = ('http://10.0.2.11:5000|http://10.0.2.15:5000').split('|')
 
+
+print(CATALOG_ADDRESSES)
 #############################################################
 # Manages replication
 class Replication:
@@ -8,7 +13,7 @@ class Replication:
         self.order_addresses = order_addresses
         self.catalog_address_turn = 0
         self.order_address_turn = 0
-
+       
     def get_catalog_address(self):
         # Get address of the current catalog server
         address = self.catalog_addresses[self.catalog_address_turn]
@@ -17,7 +22,7 @@ class Replication:
         self.catalog_address_turn += 1
         if self.catalog_address_turn >= len(self.catalog_addresses):
             self.catalog_address_turn = 0
-
+		
         return address
 
     def get_order_address(self):

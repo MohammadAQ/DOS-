@@ -1,5 +1,3 @@
-
-
 #import database
 from database import db, marshmallow, database_init
 ###########

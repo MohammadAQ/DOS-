@@ -7,8 +7,9 @@ app = Flask(__name__)
 
 # Get addresses of catalog and order servers from the environment variables
 # Addresses are split by a '|'
-CATALOG_ADDRESSES = environ.get('http://192.168.1.13:5000 | http://192.168.1.17:5000')
-ORDER_ADDRESSES = environ.get('http://192.168.1.11:5000 | http://192.168.1.16:5000')
+#CATALOG_ADDRESSES = environ.get('http://10.0.2.7:5000 | http://10.0.2.8:5000')
+#ORDER_ADDRESSES = environ.get('http://10.0.2.11:5000 | http://10.0.2.15:5000')
+
 
 #############################################################
 # Get the flask environment settings from the environment variables

@@ -15,7 +15,7 @@ def search(book_topic):
         return jsonify(search_cache.get(book_topic.lower()).search_result)
 
     # Times to try to connect to catalog servers
-    tries = replication.get_catalog_count()
+    tries= replication.get_catalog_count()
 
     for request_try in range(tries):
         try:
